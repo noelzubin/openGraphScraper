@@ -50,4 +50,3 @@ async function run(options) {
     return returnSuccess;
 }
 exports.default = run;
-module.exports = run;

@@ -49,8 +49,6 @@ export default async function run(options: OpenGraphScraperOptions): Promise<Err
   return returnSuccess;
 }
 
-module.exports = run;
-
 export type SuccessResult = {
   error: false;
   html: string;
