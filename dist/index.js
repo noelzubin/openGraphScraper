@@ -3,6 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.run = void 0;
 /* eslint-disable max-len, import/no-import-module-exports */
 const openGraphScraper_1 = __importDefault(require("./lib/openGraphScraper"));
 /**
@@ -49,4 +50,5 @@ async function run(options) {
     };
     return returnSuccess;
 }
+exports.run = run;
 exports.default = run;

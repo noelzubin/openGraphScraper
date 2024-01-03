@@ -14,7 +14,7 @@ import type { OpenGraphScraperOptions, OgObject } from './lib/types';
  * @param {string} options.url - URL of the site. (Required)
  * @returns {Promise} Promise Object with the Open Graph results
  */
-export default function run(options: OpenGraphScraperOptions): Promise<ErrorResult | SuccessResult>;
+export declare function run(options: OpenGraphScraperOptions): Promise<ErrorResult | SuccessResult>;
 export type SuccessResult = {
     error: false;
     html: string;
@@ -27,3 +27,4 @@ export type ErrorResult = {
     response: undefined;
     result: OgObject;
 };
+export default run;

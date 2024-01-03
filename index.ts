@@ -20,13 +20,13 @@ import type {
  * @param {string} options.url - URL of the site. (Required)
  * @returns {Promise} Promise Object with the Open Graph results
  */
-export default async function run(options: OpenGraphScraperOptions): Promise<ErrorResult | SuccessResult> {
+export async function run(options: OpenGraphScraperOptions): Promise<ErrorResult | SuccessResult> {
   let results;
   try {
     results = await setOptionsAndReturnOpenGraphResults(options);
   } catch (error) {
     const exception = error as Error;
-    const returnError:ErrorResult = {
+    const returnError: ErrorResult = {
       error: true,
       result: {
         success: false,
@@ -62,3 +62,5 @@ export type ErrorResult = {
   response: undefined;
   result: OgObject;
 };
+
+export default run;
